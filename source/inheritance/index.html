@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>继承练习demo</title>
+<script type="text/javascript">
+	function Parent(){
+	   this.Name = "Parent";
+	   this.Age = "12";
+	}
+	function Child(){
+		this.Name = "Child";
+		this.Sex = "Male";
+	}
+	Child.prototype = new Parent();
+	var child = new Child();
+    console.log("获取属性：",child.Name,child.Age);
+	function NewChild(){
+	   var Name = "Child";
+	   var Sex = "Male";
+	   this.GetName = function(){
+	   		return Name;
+	   };
+	   this.GetSex = function(){
+	   		return Sex;
+	   };
+
+	   this.SetName = function(_Name){
+	   		Name = _Name;
+	   };
+
+	   this.SetSex = function(_Sex){
+	   		Sex = _Sex;
+	   };
+	}
+	NewChild.prototype = new Parent();
+	var newChild = new NewChild();
+	console.log("获取Name属性："+newChild.Name,"调用GetName方法："+newChild.GetName());
+
+	console.log("设置Name属性: ",newChild.SetName("NewChild"));
+
+	console.log("获取设置后的Name属性："+newChild.Name,"调用SetName后再调用GetName方法："+newChild.GetName());
+
+</script>
+</head>
+<body>
+</body>
+</html>
