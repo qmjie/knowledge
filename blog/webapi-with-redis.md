@@ -1,4 +1,4 @@
-本文将介绍如何在ASP.NET Web API应用程序中使用Redis作为数据存储。利用*ServiceStack.Redis*库以及它*强类型*的Redis 客户端，实现如何建模和存储一对多的关系，以及使用Autofac的Web API依赖注入的功能，实现将资源库(respositories)注入到控制器(controllers)中。 <!--more-->
+本文将介绍如何在ASP.NET Web API应用程序中使用Redis作为数据存储。利用*ServiceStack.Redis*库以及它*强类型*的Redis 客户端，实现如何建模和存储一对多的关系，以及使用Autofac的Web API依赖注入的功能，实现将资源库(respositories)注入到控制器(controllers)中。 
 
 #### 客户端(Client)类库
 
